@@ -1,5 +1,7 @@
-echo 'TODO: insert build process here'
+#!/bin/bash
 
-# basic build script
-mkdir -p dist && cd dist
-echo 'Hello!' > index.html
+mkdir -p dist
+
+cp public/* dist/
+
+rollup src/main --file dist/script.js --format iife
